@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sense AI - Get Paid to Test AI Products</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #0f1729;
+            background-color: #ffffff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+        }
+
+        /* Header */
+        header {
+            padding: 28px 0;
+            border-bottom: 1px solid #e8ecf3;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0f1729;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        .trust-indicators {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .trust-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trust-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* Icons */
+        .icon {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2;
+        }
+
+        .icon-small {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            background: #ffffff;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .urgency-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: #fffbf0;
+            border: 1px solid #ffe8c0;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f1729;
+            margin-bottom: 40px;
+        }
+
+        .urgency-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #FF8A00;
+            animation: pulse 1.2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 24px;
+            color: #0f1729;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            text-shadow: 0 2px 40px rgba(15, 23, 41, 0.08);
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #FF8A00, #FF2A00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subhead {
+            font-size: 24px;
+            font-weight: 500;
+            color: #475569;
+            margin-bottom: 24px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-subhead em {
+            font-style: italic;
+            font-weight: 600;
+            color: #1E6EF2;
+        }
+
+        /* Payment Badges */
+        .payment-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .payment-badge {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: #ffffff;
+            border: 1px solid #e8ecf3;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #64748b;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(15, 23, 41, 0.04);
+        }
+
+        .payment-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(15, 23, 41, 0.08);
+            border-color: rgba(42, 209, 255, 0.3);
+        }
+
+        .payment-logo {
+            height: 20px;
+            width: auto;
+        }
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 24px;
+        }
+
+        .avatar-stack {
+            display: flex;
+            margin-right: 4px;
+        }
+
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            margin-left: -10px;
+        }
+
+        .avatar:first-child {
+            margin-left: 0;
+        }
+
+        .avatar-1 { background: linear-gradient(135deg, #0A0F9E, #1E6EF2); }
+        .avatar-2 { background: linear-gradient(135deg, #1E6EF2, #2AD1FF); }
+        .avatar-3 { background: linear-gradient(135deg, #2AD1FF, #37E07F); }
+        .avatar-4 { background: linear-gradient(135deg, #37E07F, #A6F028); }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-bottom: 56px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            color: #64748b;
+            font-weight: 700;
+        }
+
+        .badge-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge-icon-1 { 
+            background: #f0f9ff;
+        }
+        .badge-icon-2 { 
+            background: #f0f9ff;
+        }
+        .badge-icon-3 { 
+            background: #f0f9ff;
+        }
+
+        /* CTA Button with Glow */
+        .btn-primary {
+            display: inline-block;
+            padding: 22px 56px;
+            font-size: 19px;
+            font-weight: 800;
+            color: #ffffff;
+            background: linear-gradient(135deg, #0A0F9E, #1E6EF2, #2AD1FF);
+            background-size: 200% 200%;
+            border: none;
+            border-radius: 14px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(30, 110, 242, 0.25);
+            letter-spacing: -0.01em;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(30, 110, 242, 0.5),
+                        0 0 56px rgba(42, 209, 255, 0.4),
+                        0 0 84px rgba(30, 110, 242, 0.25);
+            background-position: 100% 50%;
+        }
+
+        .btn-subtext {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 100px 0;
+            background: #ffffff;
+            border-top: 1px solid #e8ecf3;
+            border-bottom: 1px solid #e8ecf3;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 56px;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 24px;
+        }
+
+        .stat-number {
+            font-size: 64px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0f1729, #475569);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            letter-spacing: -0.03em;
+        }
+
+        .stat:nth-child(1) .stat-number {
+            background: linear-gradient(135deg, #1E6EF2, #2AD1FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat:nth-child(2) .stat-number {
+            background: linear-gradient(135deg, #FF8A00, #FF2A00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat:nth-child(3) .stat-number {
+            background: linear-gradient(135deg, #37E07F, #A6F028);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #64748b;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 16px;
+            color: #0f1729;
+            letter-spacing: -0.03em;
+            text-shadow: 0 2px 40px rgba(15, 23, 41, 0.06);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            color: #64748b;
+            margin-bottom: 96px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-subtitle em {
+            font-style: italic;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+
+        .step-card {
+            background: #ffffff;
+            padding: 44px 36px;
+            border-radius: 20px;
+            border: 1px solid #e8ecf3;
+            box-shadow: 0 2px 8px rgba(15, 23, 41, 0.04);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .step-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, transparent);
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px) rotateX(2deg);
+            box-shadow: 0 20px 48px rgba(15, 23, 41, 0.12);
+            border-color: #e8ecf3;
+        }
+
+        .step-card:nth-child(1):hover::before {
+            background: #1E6EF2;
+        }
+
+        .step-card:nth-child(2):hover::before {
+            background: #1E6EF2;
+        }
+
+        .step-card:nth-child(3):hover::before {
+            background: #FF8A00;
+        }
+
+        .step-card:nth-child(4):hover::before {
+            background: #1E6EF2;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 28px;
+            background: #f8fafc;
+            color: #0f1729;
+            border: 2px solid #e8ecf3;
+        }
+
+        .step-card h3 {
+            font-size: 24px;
+            margin-bottom: 14px;
+            color: #0f1729;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+
+        .step-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Why Join */
+        .why-join {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .benefit-card {
+            background: #ffffff;
+            padding: 36px;
+            border-radius: 20px;
+            border: 1px solid #e8ecf3;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .benefit-card:hover {
+            border-color: rgba(42, 209, 255, 0.4);
+            box-shadow: 0 12px 32px rgba(15, 23, 41, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .benefit-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .benefit-card:nth-child(1) .benefit-icon {
+            background: #fff5f0;
+        }
+
+        .benefit-card:nth-child(1):hover {
+            border-color: #e8ecf3;
+            box-shadow: 0 8px 24px rgba(15, 23, 41, 0.06);
+        }
+
+        .benefit-card:nth-child(2) .benefit-icon {
+            background: #fffbf0;
+        }
+
+        .benefit-card:nth-child(2):hover {
+            border-color: #e8ecf3;
+            box-shadow: 0 8px 24px rgba(15, 23, 41, 0.06);
+        }
+
+        .benefit-card:nth-child(3) .benefit-icon {
+            background: #f0fdf4;
+        }
+
+        .benefit-card:nth-child(3):hover {
+            border-color: #e8ecf3;
+            box-shadow: 0 8px 24px rgba(15, 23, 41, 0.06);
+        }
+
+        .benefit-card:nth-child(4) .benefit-icon {
+            background: #f0f9ff;
+        }
+
+        .benefit-card:nth-child(4):hover {
+            border-color: #e8ecf3;
+            box-shadow: 0 8px 24px rgba(15, 23, 41, 0.06);
+        }
+
+        .benefit-card:nth-child(5) .benefit-icon {
+            background: #f0f9ff;
+        }
+
+        .benefit-card:nth-child(5):hover {
+            border-color: #e8ecf3;
+            box-shadow: 0 8px 24px rgba(15, 23, 41, 0.06);
+        }
+
+        .benefit-content h4 {
+            font-size: 20px;
+            color: #0f1729;
+            margin-bottom: 10px;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+
+        .benefit-content p {
+            font-size: 16px;
+            color: #64748b;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        /* Signup Section */
+        .signup-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .form-container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 64px 56px;
+            border-radius: 28px;
+            border: 1px solid #e8ecf3;
+            box-shadow: 0 4px 24px rgba(15, 23, 41, 0.06);
+        }
+
+        .form-title {
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 56px;
+            color: #0f1729;
+            letter-spacing: -0.02em;
+        }
+
+        .form-group {
+            margin-bottom: 28px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: #0f1729;
+            font-size: 15px;
+            letter-spacing: 0.01em;
+        }
+
+        .form-group label::after {
+            content: " *";
+            color: #FF2A00;
+            font-weight: 700;
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 15px;
+            color: #475569;
+        }
+
+        .checkbox-item label::after {
+            content: none;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 16px 18px;
+            font-size: 16px;
+            font-weight: 500;
+            border: 2px solid #e8ecf3;
+            border-radius: 12px;
+            background: #ffffff;
+            transition: all 0.2s;
+            font-family: inherit;
+            color: #0f1729;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2AD1FF;
+            box-shadow: 0 0 0 4px rgba(42, 209, 255, 0.12);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px;
+            border: 2px solid #e8ecf3;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .checkbox-item:hover {
+            border-color: #cbd5e1;
+            background: #f8fafc;
+        }
+
+        .checkbox-item input[type="checkbox"]:checked + label {
+            font-weight: 700;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: #2AD1FF;
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 15px;
+            color: #475569;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 22px;
+            font-size: 19px;
+            font-weight: 800;
+            color: #ffffff;
+            background: linear-gradient(135deg, #0A0F9E, #1E6EF2, #2AD1FF);
+            background-size: 200% 200%;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            margin-top: 36px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 16px rgba(30, 110, 242, 0.25);
+            letter-spacing: -0.01em;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(30, 110, 242, 0.5),
+                        0 0 56px rgba(42, 209, 255, 0.4),
+                        0 0 84px rgba(30, 110, 242, 0.25);
+            background-position: 100% 50%;
+        }
+
+        .form-disclaimer {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        /* Privacy */
+        .privacy {
+            padding: 100px 0;
+            background: #f8fafc;
+            text-align: center;
+            border-top: 1px solid #e8ecf3;
+        }
+
+        .privacy h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #0f1729;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+
+        .privacy p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #64748b;
+            line-height: 1.8;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            padding: 56px 0;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 15px;
+            font-weight: 600;
+            background: #ffffff;
+            border-top: 1px solid #e8ecf3;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 56px;
+            }
+
+            .hero-subhead {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 42px;
+            }
+
+            .form-container {
+                padding: 48px 32px;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .trust-indicators {
+                display: none;
+            }
+
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                Sense AI
+            </div>
+            <div class="trust-indicators">
+                <div class="trust-indicator">
+                    <div class="trust-dot"></div>
+                    USC Founded
+                </div>
+                <div class="trust-indicator">
+                    <div class="trust-dot"></div>
+                    Same-day Payouts
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="urgency-pill">
+                    <div class="urgency-dot"></div>
+                    Accepting 100 testers for November sessions — limited spots available
+                </div>
+
+                <h1><span class="highlight">$30</span> for Every 30 Minutes</h1>
+                <p class="hero-subhead">Get paid to chat about new AI products built for students. Remote sessions over Zoom or phone <em style="font-style: italic;">no experience needed</em>.</p>
+
+                <div class="social-proof">
+                    <div class="avatar-stack">
+                        <div class="avatar avatar-1"></div>
+                        <div class="avatar avatar-2"></div>
+                        <div class="avatar avatar-3"></div>
+                        <div class="avatar avatar-4"></div>
+                    </div>
+                    Join 200+ Trojans already signed up
+                </div>
+
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <div class="badge-icon badge-icon-1">
+                            <svg class="icon-small" fill="none" stroke="#1E6EF2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                            </svg>
+                        </div>
+                        USC-founded
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon badge-icon-2">
+                            <svg class="icon-small" fill="none" stroke="#2AD1FF" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+                            </svg>
+                        </div>
+                        Same-day payouts
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon badge-icon-3">
+                            <svg class="icon-small" fill="none" stroke="#37E07F" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/>
+                            </svg>
+                        </div>
+                        Free AI access
+                    </div>
+                </div>
+
+                <a href="#signup" class="btn-primary">Join Now</a>
+                <div class="btn-subtext">Takes 30 seconds • First sessions start November 2025</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">30min</div>
+                    <div class="stat-label">PER SESSION</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">$60</div>
+                    <div class="stat-label">PER HOUR</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">STUDENTS SIGNED UP</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Four <em>simple</em> steps from signup to getting paid</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Apply once</h3>
+                    <p>Join the tester list by completing a short form. It takes less than a minute.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Get invited</h3>
+                    <p>When a study matches your profile, we'll email you to schedule a Zoom or phone call at a convenient time.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Chat and get paid</h3>
+                    <p>Each 30-minute session pays $30 via same-day payout (Apple Pay, Zelle, or PayPal).</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Make an impact</h3>
+                    <p>Your feedback helps real AI startups improve their products for students everywhere. Plus: get free access to premium AI tools used in studies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join -->
+    <section class="why-join">
+        <div class="container">
+            <h2 class="section-title">Why Join</h2>
+            <p class="section-subtitle">The benefits of becoming an <em>early</em> tester</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg class="icon" fill="none" stroke="#FF8A00" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Better than campus jobs</h4>
+                        <p>Earn $60/hour — more than any on-campus position</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg class="icon" fill="none" stroke="#FFD400" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+                        </svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Instant payouts</h4>
+                        <p>Get paid same-day via Apple Pay, Zelle, or PayPal</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg class="icon" fill="none" stroke="#37E07F" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/>
+                        </svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Premium AI tools</h4>
+                        <p>Free access to ChatGPT Plus and other AI subscriptions</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg class="icon" fill="none" stroke="#2AD1FF" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                        </svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Work from anywhere</h4>
+                        <p>Flexible remote sessions that fit your schedule</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg class="icon" fill="none" stroke="#1E6EF2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                        </svg>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Shape the future</h4>
+                        <p>Help improve AI products used by students nationwide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Form -->
+    <section class="signup-section" id="signup">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title">Join Now</h2>
+                <form id="signupForm" action="https://formspree.io/f/meovjdgp" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email (your USC or personal email)</label>
+                        <input type="email" id="email" name="email" placeholder="john@usc.edu" required>
+                    </div>
+
+                    <div class="form-disclaimer" style="margin-top: 12px; margin-bottom: 24px; text-align: left;">
+                        We don't share your name or email with companies.
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" placeholder="21" min="18" max="99" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select your gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="non-binary">Non-binary</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="race">Race / Ethnicity</label>
+                        <select id="race" name="race" required>
+                            <option value="">Select your race/ethnicity</option>
+                            <option value="american-indian-alaska-native">American Indian or Alaska Native</option>
+                            <option value="asian">Asian</option>
+                            <option value="black-african-american">Black or African American</option>
+                            <option value="hispanic-latino">Hispanic or Latino</option>
+                            <option value="native-hawaiian-pacific-islander">Native Hawaiian or Pacific Islander</option>
+                            <option value="white">White</option>
+                            <option value="two-or-more">Two or more races</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="major">Major / Field of Study</label>
+                        <input type="text" id="major" name="major" placeholder="Computer Science" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="school-year">School Year</label>
+                        <select id="school-year" name="school-year" required>
+                            <option value="">Select your year</option>
+                            <option value="freshman">Freshman</option>
+                            <option value="sophomore">Sophomore</option>
+                            <option value="junior">Junior</option>
+                            <option value="senior">Senior</option>
+                            <option value="grad">Graduate Student</option>
+                            <option value="alumni">Alumni</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ai-familiarity">AI Familiarity</label>
+                        <select id="ai-familiarity" name="ai-familiarity" required>
+                            <option value="">Select your experience level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Areas of Interest</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="productivity" name="interests" value="productivity">
+                                <label for="productivity">Productivity</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="education" name="interests" value="education">
+                                <label for="education">Education</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="design" name="interests" value="design">
+                                <label for="design">Design</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="other" name="interests" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Sign Up for Your First Review</button>
+
+                    <div class="form-disclaimer">
+                        We'll only email you about paid sessions. No spam, ever.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="privacy">
+        <div class="container">
+            <h3>Privacy & Trust</h3>
+            <p>Your information is secure and never sold. We only contact you about paid testing sessions. Sense AI is an early-access research community founded at USC.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sense AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelector('a[href="#signup"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#signup').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Form submission with Formspree
+        document.getElementById('signupForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            
+            // Validate all required fields are filled
+            const requiredFields = ['name', 'email', 'age', 'gender', 'race', 'major', 'school-year', 'ai-familiarity'];
+            let allFilled = true;
+            let firstEmptyField = null;
+            
+            for (let fieldName of requiredFields) {
+                const field = form.querySelector(`[name="${fieldName}"]`);
+                if (!field.value || field.value.trim() === '') {
+                    allFilled = false;
+                    if (!firstEmptyField) {
+                        firstEmptyField = field;
+                    }
+                    field.style.borderColor = '#FF2A00';
+                } else {
+                    field.style.borderColor = '#e8ecf3';
+                }
+            }
+            
+            // Check if at least one interest is selected
+            const interests = form.querySelectorAll('input[name="interests"]:checked');
+            if (interests.length === 0) {
+                allFilled = false;
+                alert('Please select at least one area of interest.');
+                return;
+            }
+            
+            if (!allFilled) {
+                alert('Please fill out all required fields (marked with *)');
+                if (firstEmptyField) {
+                    firstEmptyField.focus();
+                    firstEmptyField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return;
+            }
+            
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('.submit-btn');
+            const originalText = submitButton.textContent;
+            
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    alert('Thank you for signing up! We\'ll contact you when a session matches your profile.');
+                    form.reset();
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please try again.');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem submitting your form. Please try again.');
+            } finally {
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        });
+
+        // Animate stats counter on scroll
+        function animateCounter(element, target, suffix = '') {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + suffix;
+                }
+            }, 30);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    
+                    // Animate stat numbers
+                    if (entry.target.classList.contains('stat')) {
+                        const numberElement = entry.target.querySelector('.stat-number');
+                        const text = numberElement.textContent;
+                        if (text.includes('200')) {
+                            numberElement.textContent = '0';
+                            animateCounter(numberElement, 200, '+');
+                        } else if (text.includes('60')) {
+                            numberElement.textContent = '$0';
+                            animateCounter(numberElement, 60, '');
+                            setTimeout(() => {
+                                numberElement.textContent = '$' + numberElement.textContent;
+                            }, 1500);
+                        } else if (text.includes('30min')) {
+                            numberElement.textContent = '0min';
+                            const timer = setInterval(() => {
+                                const current = parseInt(numberElement.textContent);
+                                if (current >= 30) {
+                                    numberElement.textContent = '30min';
+                                    clearInterval(timer);
+                                } else {
+                                    numberElement.textContent = (current + 1) + 'min';
+                                }
+                            }, 30);
+                        }
+                    }
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animatable elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const stats = document.querySelectorAll('.stat');
+            const cards = document.querySelectorAll('.step-card, .benefit-card');
+            
+            stats.forEach(stat => {
+                stat.style.opacity = '0';
+                stat.style.transform = 'translateY(30px)';
+                stat.style.transition = 'all 0.6s ease';
+                observer.observe(stat);
+            });
+
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
