@@ -1005,7 +1005,7 @@
         <div class="container">
             <div class="form-container">
                 <h2 class="form-title">Join Now</h2>
-                <form id="signupForm" action="https://formspree.io/f/meovjdgp" method="POST">
+                <form id="signupForm">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -1136,7 +1136,7 @@
             });
         });
 
-        // Form submission with Formspree
+        // Form submission with Google Sheets
         document.getElementById('signupForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
@@ -1177,7 +1177,19 @@
                 return;
             }
             
-            const formData = new FormData(form);
+            // Collect form data
+            const formData = {
+                name: form.querySelector('[name="name"]').value,
+                email: form.querySelector('[name="email"]').value,
+                age: form.querySelector('[name="age"]').value,
+                gender: form.querySelector('[name="gender"]').value,
+                race: form.querySelector('[name="race"]').value,
+                major: form.querySelector('[name="major"]').value,
+                schoolYear: form.querySelector('[name="school-year"]').value,
+                aiFamiliarity: form.querySelector('[name="ai-familiarity"]').value,
+                interests: Array.from(interests).map(cb => cb.value).join(', ')
+            };
+            
             const submitButton = form.querySelector('.submit-btn');
             const originalText = submitButton.textContent;
             
@@ -1186,22 +1198,23 @@
             submitButton.textContent = 'Submitting...';
             
             try {
-                const response = await fetch(form.action, {
+                // REPLACE THIS URL WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
+                const response = await fetch('https://script.google.com/macros/s/AKfycbw_j--D-3FMMNOFey0jMSez4A3qt28zvb3Y45hYySHPz7FYyYObuYDVjcplAFyefY5ZuA/exec', {
                     method: 'POST',
-                    body: formData,
+                    mode: 'no-cors',
                     headers: {
-                        'Accept': 'application/json'
-                    }
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
                 });
                 
-                if (response.ok) {
-                    alert('Thank you for signing up! We\'ll contact you when a session matches your profile.');
-                    form.reset();
-                } else {
-                    alert('Oops! There was a problem submitting your form. Please try again.');
-                }
+                // With no-cors mode, we can't read the response, so we assume success
+                alert('Thank you for signing up! We\'ll contact you when a session matches your profile.');
+                form.reset();
+                
             } catch (error) {
                 alert('Oops! There was a problem submitting your form. Please try again.');
+                console.error('Error:', error);
             } finally {
                 // Re-enable button
                 submitButton.disabled = false;
@@ -1240,15 +1253,28 @@
                     if (entry.target.classList.contains('stat')) {
                         const numberElement = entry.target.querySelector('.stat-number');
                         const text = numberElement.textContent;
-                        if (text.includes('200')) {
-                            numberElement.textContent = '0';
-                            animateCounter(numberElement, 200, '+');
-                        } else if (text.includes('60')) {
+                        if (text.includes('500')) {
+                            numberElement.textContent = '0+';
+                            const timer = setInterval(() => {
+                                const current = parseInt(numberElement.textContent);
+                                if (current >= 500) {
+                                    numberElement.textContent = '500+';
+                                    clearInterval(timer);
+                                } else {
+                                    numberElement.textContent = (current + 10) + '+';
+                                }
+                            }, 30);
+                        } else if (text.includes('$60')) {
                             numberElement.textContent = '$0';
-                            animateCounter(numberElement, 60, '');
-                            setTimeout(() => {
-                                numberElement.textContent = '$' + numberElement.textContent;
-                            }, 1500);
+                            const timer = setInterval(() => {
+                                const current = parseInt(numberElement.textContent.replace('$', ''));
+                                if (current >= 60) {
+                                    numberElement.textContent = '$60';
+                                    clearInterval(timer);
+                                } else {
+                                    numberElement.textContent = '$' + (current + 2);
+                                }
+                            }, 30);
                         } else if (text.includes('30min')) {
                             numberElement.textContent = '0min';
                             const timer = setInterval(() => {
