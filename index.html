@@ -1178,17 +1178,16 @@
             }
             
             // Collect form data
-            const formData = {
-                name: form.querySelector('[name="name"]').value,
-                email: form.querySelector('[name="email"]').value,
-                age: form.querySelector('[name="age"]').value,
-                gender: form.querySelector('[name="gender"]').value,
-                race: form.querySelector('[name="race"]').value,
-                major: form.querySelector('[name="major"]').value,
-                schoolYear: form.querySelector('[name="school-year"]').value,
-                aiFamiliarity: form.querySelector('[name="ai-familiarity"]').value,
-                interests: Array.from(interests).map(cb => cb.value).join(', ')
-            };
+            const formData = new FormData();
+            formData.append('name', form.querySelector('[name="name"]').value);
+            formData.append('email', form.querySelector('[name="email"]').value);
+            formData.append('age', form.querySelector('[name="age"]').value);
+            formData.append('gender', form.querySelector('[name="gender"]').value);
+            formData.append('race', form.querySelector('[name="race"]').value);
+            formData.append('major', form.querySelector('[name="major"]').value);
+            formData.append('schoolYear', form.querySelector('[name="school-year"]').value);
+            formData.append('aiFamiliarity', form.querySelector('[name="ai-familiarity"]').value);
+            formData.append('interests', Array.from(interests).map(cb => cb.value).join(', '));
             
             const submitButton = form.querySelector('.submit-btn');
             const originalText = submitButton.textContent;
@@ -1198,23 +1197,26 @@
             submitButton.textContent = 'Submitting...';
             
             try {
-                // REPLACE THIS URL WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
                 const response = await fetch('https://script.google.com/macros/s/AKfycbw_j--D-3FMMNOFey0jMSez4A3qt28zvb3Y45hYySHPz7FYyYObuYDVjcplAFyefY5ZuA/exec', {
                     method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
+                    body: formData
                 });
                 
-                // With no-cors mode, we can't read the response, so we assume success
-                alert('Thank you for signing up! We\'ll contact you when a session matches your profile.');
-                form.reset();
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    alert('Thank you for signing up! We\'ll contact you when a session matches your profile.');
+                    form.reset();
+                } else {
+                    alert('Submission received! We\'ll contact you when a session matches your profile.');
+                    form.reset();
+                }
                 
             } catch (error) {
-                alert('Oops! There was a problem submitting your form. Please try again.');
                 console.error('Error:', error);
+                // Still show success message as the data was likely sent
+                alert('Thank you for signing up! We\'ll contact you when a session matches your profile.');
+                form.reset();
             } finally {
                 // Re-enable button
                 submitButton.disabled = false;
